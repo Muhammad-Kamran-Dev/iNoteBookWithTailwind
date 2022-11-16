@@ -1,0 +1,21 @@
+[
+  {
+    "_id": "c31dfadb-ba56-433d-8047-1d35e724ecfe",
+    "colId": "61ea87dc-d8df-4a9f-9228-3c2ae4e76885",
+    "containerId": "",
+    "name": "getNotes",
+    "url": "localhost:3000/api/auth/",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-11-16T12:40:40.083Z",
+    "modified": "2022-11-16T14:49:17.387Z",
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "params": [],
+    "tests": []
+  }
+]
