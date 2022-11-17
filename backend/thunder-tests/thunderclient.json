@@ -2,14 +2,168 @@
   {
     "_id": "c31dfadb-ba56-433d-8047-1d35e724ecfe",
     "colId": "61ea87dc-d8df-4a9f-9228-3c2ae4e76885",
-    "containerId": "",
-    "name": "getNotes",
-    "url": "localhost:3000/api/auth/",
-    "method": "GET",
+    "containerId": "39403bb4-6fb8-4aaf-90ea-9f3adc1e74be",
+    "name": "Create new User",
+    "url": "localhost:3000/api/auth/createuser",
+    "method": "POST",
     "sortNum": 10000,
     "created": "2022-11-16T12:40:40.083Z",
-    "modified": "2022-11-16T14:49:17.387Z",
+    "modified": "2022-11-17T14:24:56.044Z",
     "headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\":\"Muhammad Sodais\",\n  \"email\":\"Sodais@gmail.com\",\n  \"password\":\"Sodais\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "360804f1-04e6-4a5e-b474-7b499742dd35",
+    "colId": "61ea87dc-d8df-4a9f-9228-3c2ae4e76885",
+    "containerId": "39403bb4-6fb8-4aaf-90ea-9f3adc1e74be",
+    "name": "Login User with Credentials",
+    "url": "localhost:3000/api/auth/login",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-11-17T07:34:07.524Z",
+    "modified": "2022-11-17T14:25:14.214Z",
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n   \"email\":\"Sodais@gmail.com\",\n  \"password\":\"Sodais\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "28009f3c-eefb-458e-8a7e-4ec1f19feea2",
+    "colId": "61ea87dc-d8df-4a9f-9228-3c2ae4e76885",
+    "containerId": "39403bb4-6fb8-4aaf-90ea-9f3adc1e74be",
+    "name": "Get User Details",
+    "url": "localhost:3000/api/auth/getuser",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-11-17T09:28:32.866Z",
+    "modified": "2022-11-17T14:25:22.780Z",
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "name": "auth-token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjM3NjQ0M2I0NWNkNDc0NjA3ZDY1ODAxIn0sImlhdCI6MTY2ODY5NTExNH0.wqXg4EQ-JRWdX1mOgaushbVcqnHHUKc2CR5_prokVJM"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "11c42b09-47db-452e-b075-2deac3608550",
+    "colId": "61ea87dc-d8df-4a9f-9228-3c2ae4e76885",
+    "containerId": "0a7b6717-a147-4c3d-a771-2a02ab01fa2f",
+    "name": "Fetch all Notes",
+    "url": "localhost:3000/api/notes/fetchallnotes",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2022-11-17T10:51:15.450Z",
+    "modified": "2022-11-17T14:25:28.003Z",
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "name": "auth-token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjM3NjQ0M2I0NWNkNDc0NjA3ZDY1ODAxIn0sImlhdCI6MTY2ODY5NTExNH0.wqXg4EQ-JRWdX1mOgaushbVcqnHHUKc2CR5_prokVJM"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a4e97c6f-6d3d-4dff-9901-cd2450bf31ed",
+    "colId": "61ea87dc-d8df-4a9f-9228-3c2ae4e76885",
+    "containerId": "0a7b6717-a147-4c3d-a771-2a02ab01fa2f",
+    "name": "Add new Note",
+    "url": "localhost:3000/api/notes/addnote",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2022-11-17T11:06:58.288Z",
+    "modified": "2022-11-17T16:17:03.313Z",
+    "headers": [
+      {
+        "name": "auth-token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjM3NjQ0M2I0NWNkNDc0NjA3ZDY1ODAxIn0sImlhdCI6MTY2ODY5NTExNH0.wqXg4EQ-JRWdX1mOgaushbVcqnHHUKc2CR5_prokVJM"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"Note Sodais1\",\n  \"description\": \"description Sodais1 \",\n  \"tag\": \"Sodais1\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d9f264d7-d536-4828-9d0c-c2b3f696ef14",
+    "colId": "61ea87dc-d8df-4a9f-9228-3c2ae4e76885",
+    "containerId": "0a7b6717-a147-4c3d-a771-2a02ab01fa2f",
+    "name": "Updat Existed Note",
+    "url": "localhost:3000/api/notes/updatenote/63765fa21f6924c55c9af67e",
+    "method": "PUT",
+    "sortNum": 60000,
+    "created": "2022-11-17T13:44:12.538Z",
+    "modified": "2022-11-17T16:22:02.845Z",
+    "headers": [
+      {
+        "name": "auth-token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjM3NjQ0M2I0NWNkNDc0NjA3ZDY1ODAxIn0sImlhdCI6MTY2ODY5NTExNH0.wqXg4EQ-JRWdX1mOgaushbVcqnHHUKc2CR5_prokVJM"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"Note \",\n  \"description\": \"Wake up late in the morining but only at holidays\",\n  \"tag\": \"Personal\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "db85a649-dc02-4a49-8309-09378be729ae",
+    "colId": "61ea87dc-d8df-4a9f-9228-3c2ae4e76885",
+    "containerId": "0a7b6717-a147-4c3d-a771-2a02ab01fa2f",
+    "name": "Delete Note",
+    "url": "localhost:3000/api/notes/deletenote/63765fa21f6924c55c9af67e",
+    "method": "DELETE",
+    "sortNum": 70000,
+    "created": "2022-11-17T14:27:07.892Z",
+    "modified": "2022-11-17T16:22:39.383Z",
+    "headers": [
+      {
+        "name": "auth-token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjM3NjQ0M2I0NWNkNDc0NjA3ZDY1ODAxIn0sImlhdCI6MTY2ODY5NTExNH0.wqXg4EQ-JRWdX1mOgaushbVcqnHHUKc2CR5_prokVJM"
+      },
       {
         "name": "Content-Type",
         "value": "application/json"

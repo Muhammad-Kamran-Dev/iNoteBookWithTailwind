@@ -4,6 +4,21 @@
     "colName": "InoteBook",
     "created": "2022-11-16T12:40:28.636Z",
     "sortNum": 10000,
-    "folders": []
+    "folders": [
+      {
+        "_id": "39403bb4-6fb8-4aaf-90ea-9f3adc1e74be",
+        "name": "Auth",
+        "containerId": "",
+        "created": "2022-11-16T16:57:24.319Z",
+        "sortNum": 10000
+      },
+      {
+        "_id": "0a7b6717-a147-4c3d-a771-2a02ab01fa2f",
+        "name": "Notes",
+        "containerId": "",
+        "created": "2022-11-17T10:51:03.869Z",
+        "sortNum": 20000
+      }
+    ]
   }
 ]
