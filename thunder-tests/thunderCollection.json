@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "_id": "9ea240be-ee05-42b4-9939-91d87aa24d8e",
+    "colName": "InoteBook",
+    "created": "2022-11-17T17:23:42.995Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "c47617ac-87fc-4d83-a304-9cd4217970a5",
+        "name": "Auth",
+        "containerId": "",
+        "created": "2022-11-17T17:23:43.030Z",
+        "sortNum": 10000
+      },
+      {
+        "_id": "02b7d321-6b5c-4d0b-8352-5db5d3fc86c8",
+        "name": "Notes",
+        "containerId": "",
+        "created": "2022-11-17T17:23:43.031Z",
+        "sortNum": 20000
+      }
+    ]
+  }
+]
