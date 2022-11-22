@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Link } from "react-router-dom";
 import AuthContext from '../../context/auth/AuthContext';
+import { HiLockClosed } from 'react-icons/hi';
 const Login = () => {
     const context = useContext(AuthContext);
     const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -27,7 +28,7 @@ const Login = () => {
                         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
                         <p className="mt-2 text-center text-sm text-gray-600">
                             Or
-                            <Link to='/signup' className="font-medium text-indigo-600 hover:text-indigo-500" >
+                            <Link to='/signup' className="font-medium text-indigo-600 hover:text-indigo-500 ml-3" >
                                 Create new Account
                             </Link>
                         </p>
@@ -48,6 +49,7 @@ const Login = () => {
                                     placeholder="Email address"
                                     value={credentials.email}
                                     onChange={onChangeHandler}
+                                    minLength="5"
                                 />
                             </div>
                             <div>
@@ -64,6 +66,7 @@ const Login = () => {
                                     placeholder="Password"
                                     value={credentials.password}
                                     onChange={onChangeHandler}
+                                    minLength="5"
                                 />
                             </div>
                         </div>
@@ -84,7 +87,7 @@ const Login = () => {
                                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             >
                                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-                                    {/* <HiLockClosed className="h-5 w-5 text-white group-hover:text-orange-300 " aria-hidden="true" /> */}
+                                    <HiLockClosed className="h-5 w-5 text-white group-hover:text-orange-300 " aria-hidden="true" />
                                 </span>
                                 Sign in
                             </button>

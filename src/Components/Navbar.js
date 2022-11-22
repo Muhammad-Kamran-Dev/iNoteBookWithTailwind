@@ -1,8 +1,13 @@
 import React from 'react'
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation,useNavigate } from "react-router-dom";
 
 export function Navbar({ title }) {
+    const navigate = useNavigate();
     let location = useLocation();
+    const handleLogout = () => {
+        localStorage.clear();
+        navigate("/login");
+    }
     return (
         <nav className='w-full shadow-sm '>
             <div className="nav-header flex justify-between items-baseline w-9/12 mx-auto pt-10 pb-7">
@@ -32,14 +37,17 @@ export function Navbar({ title }) {
                             <i className="fa-brands fa-instagram"></i></div>
 
                     </div>
+
                     <div className="authinticate flex gap-3">
-                        <Link to="/signup" className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 text-base px-3 rounded">
-                            Signup
-                        </Link>
-                        <Link to="/login" className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 text-base px-3 rounded">
-                            Login
-                        </Link>
+                        {(!localStorage.getItem("authToken")) ?
+                            <Link to="/login" className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 text-base px-3 rounded mx-1">
+                                Login
+                            </Link> : <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 text-base px-3 rounded" onClick={handleLogout}>
+                                Logout
+                            </button>
+                        }
                     </div>
+
                 </div>
             </div>
         </nav>

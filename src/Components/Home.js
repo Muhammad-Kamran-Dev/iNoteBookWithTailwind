@@ -1,20 +1,26 @@
-import React, { useEffect } from 'react'
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom';
 import NoteContainer from './NoteContainer';
 import Notes from './Notes';
 import 'react-toastify/dist/ReactToastify.css';
 const Home = () => {
   let location = useLocation();
+  let navigate = useNavigate();
   useEffect(() => {
-    document.title = location.pathname === "/" && "iNoteBook - Home";
+    if (localStorage.getItem("authToken")) {
+      document.title = location.pathname === "/" && "iNoteBook - Home";
+    } else {
+      navigate('/login');
+    }
     // eslint-disable-next-line
   }, [])
 
   return (
-    <div className=''>
-      <NoteContainer />
-      <Notes />
-    </div>
+    localStorage.getItem('authToken') ?
+      <div className=''>
+        <NoteContainer />
+        <Notes />
+      </div> : ""
   )
 }
 
